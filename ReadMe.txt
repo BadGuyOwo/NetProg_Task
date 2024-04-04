@@ -1,0 +1,1 @@
+the server relays messages from one client to all other connected clients. Each client also runs a separate thread to continuously receive messages from the server, enabling them to engage in real-time communication like a chat room.
