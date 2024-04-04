@@ -1,1 +1,3 @@
-each message sent by the client includes the client's name followed by a colon (:) and the message text. The server then parses this information to distinguish between the sender and the message content. Additionally, if a client sends a "quit" message, it will notify the server and close the connection.
+If you send a message larger than 512 bytes in this setup, it will be received in multiple chunks, each chunk being a maximum of 512 bytes. You need to handle this situation by concatenating these chunks to reconstruct the original message
+
+With this modification, the client-side code will handle sending messages larger than 512 bytes by splitting them into chunks of 512 bytes and sending them sequentially. However, on the server side, you'll need to handle the reception of these chunks and concatenate them to reconstruct the original message. The server-side code provided earlier in my responses already handles this correctly.
