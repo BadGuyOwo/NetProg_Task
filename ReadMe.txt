@@ -1,1 +1,1 @@
-the server relays messages from one client to all other connected clients. Each client also runs a separate thread to continuously receive messages from the server, enabling them to engage in real-time communication like a chat room.
+each message sent by the client includes the client's name followed by a colon (:) and the message text. The server then parses this information to distinguish between the sender and the message content. Additionally, if a client sends a "quit" message, it will notify the server and close the connection.
